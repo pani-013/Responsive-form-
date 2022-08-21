@@ -1,0 +1,316 @@
+:root {
+    --fs: 17px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-family: sans-serif;
+    /* overflow: hidden; */
+    /* This part is disabled because of errors with the middle div */
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: large;
+}
+
+.box1 {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    background-image: url(circuit.webp);
+    width: 50%;
+    height: 100vh;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    width: 50%;
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.middle {
+    position: absolute;
+    width: 97%;
+    height: 85%;
+    border-top: 50px solid rgba(0, 0, 0, 0.401);
+    border-left: 50px solid rgba(0, 0, 0, 0.401);
+    border-bottom: 50px solid rgba(0, 0, 0, 0.40);
+}
+
+.c1 {
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+.c1 img {
+    height: 60px;
+    margin-top: 4rem;
+}
+
+.c2 {
+    padding: 2rem 10rem 2rem 10rem;
+    height: 80vh;
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form input {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
+
+}
+
+form input,
+button {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.135);
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.row1 label,
+.row2 label,
+.row3 label {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    overflow: visible;
+}
+
+.row2 label,
+.row3 label {
+    width: 100%;
+}
+
+/* css for toggle switch */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* ****added by self start */
+/* .slider.round{
+                box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 14%);
+            } */
+/* end  */
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* link styling */
+a {
+    text-decoration: none;
+    color: #2196F3;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* button styling  */
+button {
+    padding: 0.5rem;
+    height: 35px;
+}
+
+button:hover {
+    background-color: #2196F3;
+    color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+}
+
+/* horizontal rule styling  */
+hr {
+    width: inherit;
+}
+
+/* footer styling  */
+footer {
+    margin-top: 10%;
+    text-align: center;
+}
+
+footer p {
+    color: gray;
+}
+
+
+/* adding media query  */
+@media screen and (max-width: 750px),
+(max-height: 500px) {
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1vw;
+    }
+
+    .box1 {
+        /* background-image: url(unsplash\ cloud\ grey\ mountain.jpg); */
+        background-image: url(circuit.webp);
+    }
+
+    .box1 img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .left {
+        height: 0px;
+        width: 0px;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: visible;
+        background-color: rgba(0, 0, 0, 0.45);
+        color: white;
+    }
+
+    .row1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row1,
+    .row2,
+    .row3,
+    .row4,
+    .row5 {
+        padding-bottom: 2rem;
+    }
+
+    .row1 label {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .c2 {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    a {
+        color: #b8dfff;
+    }
+
+    footer p {
+        color: rgb(192, 192, 192);
+    }
+
+    form label,
+    form input,
+    form span,
+    footer p,
+    a,
+    button,
+    .row5 p,
+    .row5 strong {
+        font-size: var(--fs);
+    }
+
+}
+
+/* adding media query 2 for hand devices  */
+/* @media screen and (max-width: 375px), (max-height: 667px)
+        {
+            form label, form input, form span, footer p, a, button, .row5 p, .row5 strong{
+                font-size: 2.5vw;
+            }
+        } */

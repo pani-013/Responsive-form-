@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Trial 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="formtrial2.css">
+    
+</head>
+<body>
+    <div class="box1">
+        <div class="left"></div>
+        <!-- <div class="middle"></div> -->
+        <div class="right">
+            <div class="c1">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="c2">
+                <h3>Register</h3>
+                <br><br>
+                <form action="" onsubmit="myfunc(event)">
+                    <div class="row1">
+                        <label for="">First Name
+                            <input type="text" placeholder="Your First Name" id="fname">
+                        </label>
+                        <label for="">Last Name
+                            <input type="text" placeholder="Your Last Name" id="lname">
+                        </label>
+                    </div>
+                    <br><br>
+                    <div class="row2">
+                        <label for="">Email Address
+                            <input type="email" placeholder="Your Email Address" id="email">
+                        </label>
+                    </div>
+                    <br><br>
+                    <div class="row3">
+                        <label for="">Password
+                            <input type="password" placeholder="Your Password" id="pass">
+                        </label>
+                    </div>
+                    <br><br>
+                    <div class="row4">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                          <span>
+                              &nbsp I accept the <a href="">Terms Of Service</a> as well as <a href="">Privacy Policy</a>.
+                            </span>
+                    </div>
+                    <br>
+                    <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    &nbsp Create Account
+                </button>
+                </form>
+                
+                <br><br>
+                <hr>
+                <br><br>
+                <div class="row5">
+                    <p>Already have an account? <a href=""><strong>Login Now</strong></a>.</p>
+                </div>
+                <!-- here is the footer section -->
+                <footer>
+                    <a href="">Help</a>
+                    &nbsp;
+                    <a href="">Legal</a>
+                    &nbsp;
+                    <a href="">Privacy</a>
+                    &nbsp;
+                    <a href="">TOS</a>
+                    <br><br>
+                    <p>&#169; Cloudklabouter</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfunc(event)
+        {
+            event.preventDefault(); 
+            let full_name = document.getElementById('fname').value; 
+            let last_name = document.getElementById('lname').value; 
+            let email = document.getElementById('email').value; 
+            let password = document.getElementById('pass').value; 
+
+            localStorage.setItem('full_name', full_name); 
+            localStorage.setItem('last_name', last_name); 
+            localStorage.setItem('email',email ); 
+            localStorage.setItem('password',pass ); 
+        }
+    </script>
+</body>
+</html>
